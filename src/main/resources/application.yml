@@ -1,0 +1,53 @@
+#
+#environment:
+#    dev: false
+#    user: 30
+#    pass: 50000
+#    url:  www.1.com
+#    client: 564654
+#    secret: 6546546
+#
+#
+#
+##array
+#countries: Argentina, Brazil, Italy, Spain
+#
+## map
+#map-values:
+#  - keyA: A
+#  - keyB: B
+#  - keyC: C
+#
+##enum
+#enum-value: RED
+#
+## local date
+#local-date: 2025-12-01
+#
+## local date time
+#local-datetime: 2025-12-01T09:00:00
+
+
+
+config:
+  miscellaneous:
+    -
+      poll-frequency: 20
+      timeout: 10
+      max-retry: 3
+    -
+      log-erros: true
+      fail-on-errors: false
+    -
+      publish-metrics: true
+      metrics-frequency: 30
+
+
+configobject:
+  services:
+    -
+      name: login-service
+      url: http://login.example.com
+    -
+      name: data-service
+      url: http://data.example.com
